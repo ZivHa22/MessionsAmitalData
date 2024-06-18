@@ -1,0 +1,31 @@
+.ticket {
+    border: 1px solid black;
+    padding: 20px;
+    margin: 20px;
+    input {
+        width: 60%;
+    }
+
+    .dataInput {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 10px;
+
+        ::ng-deep .ng-select {
+            width: 64%;
+
+        }
+    }
+
+    .messinMode {
+        width: 20px;
+        height: 15px;
+
+        &.messionNoCompleted {
+            background-color: red;
+        }
+        &.messionCompleted {
+            background-color: green;
+        }
+    }
+}

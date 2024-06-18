@@ -1,0 +1,8 @@
+<div class="container-open-messions">
+    <span>משימות פתוחות לפי משתמשים:</span>
+    <div *ngFor="let user of usersList">
+        <label>{{user.name}} : {{user.messions.length}}</label>
+
+    </div>
+
+</div>

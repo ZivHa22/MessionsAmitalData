@@ -1,0 +1,20 @@
+.container{
+    width: 40%;
+    margin: auto;
+    top: 12vw;
+    position: relative;
+    h1{
+        text-align: center;
+    }
+    .massionsManage{
+        display: flex;
+        justify-content: space-between;
+
+     
+    }
+    .listMessions{
+        border: 1px solid black;
+    }
+}
+
+

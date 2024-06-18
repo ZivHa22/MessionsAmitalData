@@ -1,0 +1,19 @@
+<div class="container">
+    <h1>Messions Manage</h1>
+    <div class="massionsManage">
+       
+        <div class="listMessions">
+            list
+            <div *ngFor="let task of taskList">
+                <app-mession-ticket [usersList]="usersList" [userSelected]="task.userId" [subjectTask]="task.subject" [dateTask]="task.targetDate" [isCompleted]="task.isCompleted" (action)="AddMession($event)" [insertMode]="false"></app-mession-ticket>
+            </div>
+        </div>
+
+
+        <div class="addMession">
+            <app-mession-ticket [usersList]="usersList" (action)="AddMession($event)" [insertMode]="true"></app-mession-ticket>
+            <app-open-messions></app-open-messions>
+        </div>
+       
+    </div>
+</div>

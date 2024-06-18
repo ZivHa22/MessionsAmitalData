@@ -1,0 +1,19 @@
+<div class="ticket">
+    <div>
+        <div class="dataInput">
+            <label>נושא:</label>
+            <input type="text" name="subject" [(ngModel)]="subject" [disabled]="!insertMode"/>
+        </div>
+        <div class="dataInput">
+            <label>משתמש:</label>
+            <ng-select [items]="usersList" bindLabel="name" bindValue="userId" [(ngModel)]="userId" [disabled]="!insertMode"/>
+        </div>
+        <div class="dataInput">
+            <label>תאריך יעד:</label>
+            <input *ngIf="insertMode" type="date" name="date" [(ngModel)]="date" />
+            <input *ngIf="!insertMode" type="text" name="date" [(ngModel)]="dateStr" [disabled]="!insertMode" />
+        </div>
+    </div>
+    <div *ngIf="!insertMode" class="messinMode" [ngClass]="{'messionCompleted': isCompleted , 'messionNoCompleted' : !isCompleted}"></div>
+    <button *ngIf="insertMode" (click)="AddMession()">שמור</button>
+</div>
